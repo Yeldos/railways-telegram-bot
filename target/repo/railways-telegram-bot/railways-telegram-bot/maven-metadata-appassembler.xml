@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>railways-telegram-bot</groupId>
+  <artifactId>railways-telegram-bot</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20191101094036</lastUpdated>
+  </versioning>
+</metadata>
