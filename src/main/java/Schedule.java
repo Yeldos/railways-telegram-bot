@@ -10,12 +10,16 @@ public class Schedule {
     private Document document;
     String departureStation = "";
     String arrivalStation = "";
+    String departureDate = "";
+    String arrivalDate = "";
 
     public String[] getAllItems() {
         try {
+            departureDate = departureDate.replace(", ", "%2C+");
             document = Jsoup.connect("https://bilet.railways.kz/sale/default/route/search?route_search_form%5BdepartureStation%5D=" + departureStation +
                     "&route_search_form%5BarrivalStation%5D=" + arrivalStation +
-                    "&route_search_form%5BforwardDepartureDate%5D=31-10-2019%2C+%D1%81%D1%80%D0%B4&route_search_form%5BbackwardDepartureDate%5D=").get();
+                    "&route_search_form%5BforwardDepartureDate%5D=" + departureDate +
+                    "&route_search_form%5BbackwardDepartureDate%5D=").get();
         } catch (IOException e) {
             e.printStackTrace();
         }
